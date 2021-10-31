@@ -1,24 +1,59 @@
-import logo from './logo.svg';
 import './App.css';
+import Home from './pages/Home/Home/Home';
+import OrderReview from './pages/OrderReview/OrderReview';
+import OrderPlace from './pages/OrderPlace/OrderPlace';
+import Footer from './Shares/Footer/Footer';
+import Header from './Shares/Header';
+import LoginPage from './pages/Login/LoginPage/LoginPage';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
+import Dashboard from './pages/DashBoard/Dashboard/Dashboard';
+import AuthProvider from './contexts/AuthProvider';
+import PrivateRoute from './pages/Login/PrivateRoute/PrivateRoute';
+import Booking from './pages/Booking/Booking';
+import AddService from './pages/DashBoard/AddService/AddService';
+import ManageBookings from './pages/DashBoard/MannageBooking/MannageBooking';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AuthProvider>
+      <Router>
+        <Header />
+        <Switch>
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route path="/home">
+              <Home />
+            </Route>
+            <Route path="/login">
+              <LoginPage />
+            </Route>
+            <PrivateRoute path="/dashboard">
+              <Dashboard />
+            </PrivateRoute>
+            <PrivateRoute path="/addService">
+              <AddService />
+            </PrivateRoute>
+            <PrivateRoute path="/manageBookings">
+              <ManageBookings />
+            </PrivateRoute>
+            <PrivateRoute path="/orderReview/:id">
+              <OrderReview />
+            </PrivateRoute>
+            <PrivateRoute path="/booking">
+              <Booking />
+            </PrivateRoute>
+            <PrivateRoute path="/orderPlace">
+              <OrderPlace />
+            </PrivateRoute>
+          </Switch>
+        <Footer />
+      </Router>
+    </AuthProvider>
   );
 }
 
