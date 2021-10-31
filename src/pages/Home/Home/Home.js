@@ -8,11 +8,11 @@ const Home = () => {
     return (
         <div>
             <Banner />
-            <Services />
-            <div className="">
+            <div className="mt-5 mb-20">
                 <img className="planeAnimation" src="https://www.vippng.com/png/detail/346-3466204_boeing-787-png-boeing-787-10-klm.png" alt="" />
                 <hr />
             </div>
+            <Services />
             <Gallery />
         </div>
     );

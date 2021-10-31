@@ -1,5 +1,6 @@
 import React from 'react';
 import { Carousel } from 'react-bootstrap';
+import './Banner.css';
 
 const Banner = () => {
     return (
@@ -7,35 +8,36 @@ const Banner = () => {
             <Carousel variant="dark">
               <Carousel.Item>
                 <img
-                  className="d-block w-100"
-                  src = "https://images.unsplash.com/photo-1549300461-11c5b94e8855?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8c3VuZGFyYmFufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80"
+                  className="d-block carousel-img  w-full"
+                  src="https://bdembassymexico.org/wp-content/uploads/2019/07/Nilgiri-Bandarban.jpg"
                   alt="First slide"
                 />
                 <Carousel.Caption>
-                  <h5>First slide label</h5>
-                  <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                  <p className="text-5xl font-bold text-white ">Khagrachari Bandarban</p>
+                  <p className="text-lg font-semibold text-gray-200">Bandarban is the pious hub of Theravada Buddhism practiced by tribal communities like Marma or Mogh. Here you will find Buddha Dhatu Jadi, the largest Theravada Buddhist Temple of Bangladesh and the second biggest Buddha sculpture in the country.</p>
                 </Carousel.Caption>
               </Carousel.Item>
               <Carousel.Item>
                 <img
-                  className="d-block w-100"
-                  src = "https://media-cdn.tripadvisor.com/media/photo-s/12/9b/09/8a/sundarban-beauty.jpg"
+                  className="d-block carousel-img  w-full"
+                  src = "https://www.travelguru.com/holiday-packages/images/goa.jpg"
                   alt="Second slide"
                 />
                 <Carousel.Caption>
-                  <h5>Second slide label</h5>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  <p className="text-5xl font-bold text-white ">Cox's Bazar Beach</p>
+                  <p className="text-lg text-gray-500 font-semibold " > It is famous mostly
+                  for its long natural sandy beach.It is located 150 km(93 mi) south of the city of Chittagong.Cox 's Bazar is also known by the name Panowa, which translates literally as "yellow flower".</p>
                 </Carousel.Caption>
               </Carousel.Item>
               <Carousel.Item>
                 <img
-                  className="d-block w-100"
-                  src = "https://www.daily-bangladesh.com/media/imgAll/2020June/en/Coxs-bazar-2009131205.jpg"
+                  className="d-block carousel-img  w-full"
+                  src = "https://www.travelmate.com.bd/wp-content/uploads/2020/08/kuakata-patuakhai.jpg"
                   alt="Third slide"
                 />
                 <Carousel.Caption>
-                  <h5>Third slide label</h5>
-                  <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                  <p className="text-5xl font-bold text-white ">Kuakata Beach</p>
+                  <p className="text-gray-200 text-lg font-semibold" > Kuakata is one of the rarest places which has the unique beauty of offering the full view of the rising and setting of crimson sun in the water of the Bay of Bengal in a calm environment.That perhaps makes Kuakata one of the world 's unique beaches</p>
                 </Carousel.Caption>
               </Carousel.Item>
             </Carousel>

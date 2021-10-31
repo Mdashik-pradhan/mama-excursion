@@ -11,9 +11,9 @@ const OrderPlace = () => {
     }
     return (
         <div className="h-screen text-center">
-            <h3 className=" mt-5">
+            <p className=" mt-5 text-xl md:text-2xl mb-5">
             Thank you <span className="text-green-600">{user.displayName}</span> for booking our service!!! We will send you an email.
-            </h3>
+            </p>
             <button onClick={handleManageBookings} className="bg-green-500 px-3 py-2 rounded-lg text-lg font-semibold text-white">See Your Bookings</button>
         </div>
     )

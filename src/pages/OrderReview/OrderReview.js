@@ -6,7 +6,7 @@ const OrderReview = () => {
     const [service, setService] = useState();
     const { id } = useParams();
       useEffect(() => {
-          const url = `http://localhost:5000/services/${id}`
+          const url = `https://spooky-catacombs-20536.herokuapp.com/services/${id}`
           fetch(url)
               .then(res => res.json())
               .then(data => setService(data))
@@ -14,13 +14,14 @@ const OrderReview = () => {
 
     return (
         <div className="container mt-5 mb-5">
-                <h4 className="text-center mb-4">You are going to <span className="text-green-600">BOOKING</span> this service!!!</h4>
-            <div className="flex justify-between items-center">
-                <div className="text-center bg-green-600 hover:bg-green-700 transition 3s rounded text-white pb-3">
-                    <img className="h-80 mb-3 rounded" src={service?.data.photoUrl} alt="" />
-                    <h4>{service?.data.name}</h4>
-                    <h5>{service?.data.duration}</h5>
-                    <h6>${service?.data.price}</h6>
+                <p className="text-center mb-4 text-3xl font-semibold">You are going to <span className="text-green-600">BOOKING</span> this service!!!</p>
+            <div className="md:flex justify-between items-center">
+                <div className="text-center w-1/2 bg-green-600 hover:shadow-2xl  transition duration-500 rounded text-white pb-3">
+                    <img className=" mb-3 rounded" src={service?.data.photoUrl} alt="" />
+                    <p className="text- font-semibold">{service?.data.name}</p>
+                    <p className="text-lg">{service?.data.duration}</p>
+                    <p className="text- font-semibold">${service?.data.price}</p>
+                    <p className="text-medium font-semibold">${service?.data.description}</p>
                 </div>
                 <div>
                     <Booking service={service} />

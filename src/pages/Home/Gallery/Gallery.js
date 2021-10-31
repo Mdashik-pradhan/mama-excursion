@@ -3,7 +3,7 @@ import React from 'react';
 const Gallery = () => {
     return (
         <div className="container mt-5 mb-5">
-            <h3 className="text-center text-green-500">Image Gallery</h3>
+            <p className="text-center text-2xl font-semibold text-green-500">Image Gallery</p>
             <div className="grid md:grid-rows-3 md:grid-cols-3 lg:grid-cols-4 sm:grid-cols-2 overflow-hidden">
                 <div className="overflow-hidden">
                 <img  className="w-full h-full border transform hover:scale-150 transition duration-500 ease-in-out" src="https://www.state.gov/wp-content/uploads/2019/04/Bangladesh.jpg" alt="" />

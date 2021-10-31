@@ -5,7 +5,7 @@ const AllServices = () => {
     const [services, setServices] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/services')
+        fetch('https://spooky-catacombs-20536.herokuapp.com/services')
         .then(res => res.json())
         .then(data => setServices(data))
     },[])
@@ -14,7 +14,7 @@ const AllServices = () => {
         console.log(id)
         const proceed = window.confirm('Are you sure, you want to delete?')
         if (proceed) {
-            const url = `http://localhost:5000/services/${id}`;
+            const url = `https://spooky-catacombs-20536.herokuapp.com/services/${id}`;
             fetch(url, {
                     method: 'DELETE',
                 })

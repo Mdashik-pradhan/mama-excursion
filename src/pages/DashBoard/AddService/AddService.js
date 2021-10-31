@@ -8,7 +8,7 @@ const AddService = () => {
     const { register, handleSubmit, reset } = useForm();
     
     const onSubmit = data => {
-        fetch('http://localhost:5000/services', {
+        fetch('https://spooky-catacombs-20536.herokuapp.com/services', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -30,7 +30,7 @@ const AddService = () => {
                 <Sidebar />
             </div>
             <div className=" mx-auto mt-4 text-center">
-                <h1 className="text-green-500">Add Service</h1>
+                <p className="text-green-500 text-4xl font-semibold">Add Service</p>
                 <form className="flex flex-col w-80" onSubmit={handleSubmit(onSubmit)}>
                     <input className="border-2 border-gray-300 m-2 px-2 rounded" {...register("name", {required: true})} placeholder="Service Name"/>
                     <textarea className="border-2 border-gray-300 m-2 px-2 rounded" {...register("description", {required: true})} placeholder="Service description"/>

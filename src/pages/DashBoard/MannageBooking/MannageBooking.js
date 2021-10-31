@@ -8,7 +8,7 @@ const ManageBookings = () => {
     const {user} = useAuth();
 
     useEffect(() => {
-        fetch('http://localhost:5000/bookings')
+        fetch('https://spooky-catacombs-20536.herokuapp.com/bookings')
         .then(res => res.json())
         .then(data => setBookings(data));
     }, [])
@@ -20,7 +20,7 @@ const ManageBookings = () => {
            console.log(id)
            const proceed = window.confirm('Are you sure, you want to delete?')
            if (proceed) {
-               const url = `http://localhost:5000/bookings/${id}`;
+               const url = `https://spooky-catacombs-20536.herokuapp.com/bookings/${id}`;
                fetch(url, {
                        method: 'DELETE',
                    })
@@ -71,7 +71,7 @@ const ManageBookings = () => {
                 </table>
                 :
                 <div>
-                    <h3 className="text-red-500 text-center">You haven't booking yet, Want to booking now?</h3>
+                    <p className="text-red-500 text-center text-3xl font-semibold mb-3">You haven't booking yet, Want to booking now?</p>
                     <Link to='/' className="bg-green-600 text-white px-4 py-2 rounded text-lg font-semibold no-underline">Make your day</Link>
                 </div>
                 }
